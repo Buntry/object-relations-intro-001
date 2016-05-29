@@ -1,5 +1,26 @@
 #code along here!
-
+class Person
+    attr_accessor :name, :happiness, :partner
+    def initialize(name)
+        @name = name
+        @happiness = 5
+    end
+    
+    def go_on_a_date(person, matchworthy)
+        if matchworthy
+            @happiness += 1
+            person.happiness += 1
+        else
+            @happiness -= 1
+            person.happiness -= 1
+        end
+    end
+    
+    def get_married(person)
+        @partner = person
+        person.partner = self
+    end
+end
 
 #############
 
